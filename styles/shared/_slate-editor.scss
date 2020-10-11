@@ -1,0 +1,28 @@
+.control-menu{
+    text-align: right;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+
+  .status-box{
+      display: inline-block;
+  }
+}
+
+
+ @media only screen and (min-width:365px){     
+    .title{
+        float: left;
+        font-weight: bold;
+       
+    }
+}
+ @media  screen and (min-width:1140px){     
+    .title{
+        float: left;
+        font-weight: bold;
+    }
+}
+
+       

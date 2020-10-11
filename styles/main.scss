@@ -1,0 +1,72 @@
+@import "./shared/fonts";
+@import"./index";
+@import"./shared/header";
+@import "./shared/portfolios";
+@import './shared/blogs';
+@import './shared/slate-editor';
+@import'./shared/about';
+
+
+html, body {
+  height:100%;
+  width:100%;
+  font-family: 'Montserrat', 'Helvetica';
+}
+
+.self-typed{
+  font-size:31px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.error{
+  font-weight: 700;
+  color:red;
+}
+
+
+// --------- BASE PAGE -------------
+
+.base-page {
+  padding: 150px 0 100px 0;
+  color: black;
+  background-color:#ecedee;
+  min-height:100vh;
+
+  .page-header {
+    .page-header-title {
+      font-weight: 700;
+      color: black;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+}
+.layout-container{
+  overflow: hidden;
+}
+// --------- BASE PAGE -------------
+
+
+@media screen and (min-width:992px){
+    .alert{
+         width: 65%;
+         margin-left: 15%;
+    }
+}
+
+
+@media screen and (min-width:1140px){
+    .alert{
+         width: 65%;
+         margin-left: 15%;
+    }
+}
+
+
+
