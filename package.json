@@ -1,6 +1,9 @@
 {
   "name": "portfolio-kalyan",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
   "description": "Kalyan Portfolio Application Made By React And Next JS",
   "main": "index.js",
   "scripts": {
