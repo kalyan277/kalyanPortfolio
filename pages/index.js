@@ -20,7 +20,7 @@ export default class Index extends Component {
     this.animateCard();
     this.timerHandle = setTimeout(
       () => this.setState({ loading: false }),
-      1000
+      3000
     ); 
   }
 
