@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 
 import { FormGroup, Label, InputGroupAddon, InputGroupText } from "reactstrap";
 
-require("react-datepicker/dist/react-datepicker.css");
+
 // import { Form } from 'formik';
 import moment from "moment";
 
