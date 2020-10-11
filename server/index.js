@@ -3,6 +3,7 @@ const next = require("next");
 const mongoose = require('mongoose');
 const routes = require("../routes");
 const authServices = require('./services/auth');
+const compression =require('compression');
 const config =require('./config');
 const bodyParser = require("body-parser");
 const dev = process.env.NODE_ENV !== "production";
@@ -22,16 +23,19 @@ const secretData=[
 ]
 
 mongoose
-  .connect(config.DB_URI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.DB_URI
+   ,{
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("DataBase Connected"))
   .catch((err) => console.error(err));
 
 app.prepare().then(() => {
   const server = express();
+  server.use(compression());
   server.use(bodyParser.json());
 
   server.use("/api/v1/portfolios", portfolioRoutes);

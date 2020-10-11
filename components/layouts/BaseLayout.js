@@ -7,7 +7,7 @@ export default function BaseLayout(props) {
     const { className, children, isAuthenticated, isSiteOwner } = props;
    // console.log(isAuthenticated);
    const headerType = props.headerType || 'default';
-   const title = props.title || 'Kalyan Singh';
+   const title = props.title || 'Kalyan Singh Portfolio';
     return (
       <React.Fragment>
         <Head>
@@ -28,11 +28,7 @@ export default function BaseLayout(props) {
             integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
             crossOrigin="anonymous"
           />
-          <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-          />
-          <link rel="icon" type="image/ico" href="/static/favicon.ico" />
+        <link rel="icon" type="image/ico" href="/static/favicon.ico" />
         </Head>
         <div className="layout-container">
           <Header
