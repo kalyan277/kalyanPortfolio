@@ -72,7 +72,7 @@ import { CheckLoadingOfLanding } from "../actions";
               />
             </div>
 
-            <Container className={loading ? "visibibleContainer" : ""}>
+            <Container className={!loading ? "visibibleContainer" : ""}>
               <Row>
                 <Col md="6">
                   <div className="hero-section text-center">
