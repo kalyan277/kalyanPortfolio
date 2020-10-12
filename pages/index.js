@@ -49,12 +49,12 @@ import { CheckLoadingOfLanding } from "../actions";
 
 
   render() {
-    console.log(this.props);
+   // console.log(this.props);
     const {isAuthenticated,user}=this.props.auth
     const { isFlipping,loading } = this.state;
     const{isloading}= this.props;
-      console.log(loading);
-         console.log(isloading);
+     console.log(loading);
+      //   console.log(isloading);
     return (
       <React.Fragment>
         <BaseLayout
@@ -72,7 +72,7 @@ import { CheckLoadingOfLanding } from "../actions";
               />
             </div>
 
-            <Container className={!loading ? "visibibleContainer" : ""}>
+            <Container className={loading ? "visibibleContainer" : ""}>
               <Row>
                 <Col md="6">
                   <div className="hero-section text-center">
