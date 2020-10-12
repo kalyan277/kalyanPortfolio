@@ -124,3 +124,13 @@ export const deleteBlog = (id) => {
     .then((response) => response.data);
 };
 
+
+
+//      Redux To The App
+export const CheckLoadingOfLanding = isloading =>{
+  return{
+    type:'CHECK_LOADING',
+    payload:isloading
+  };
+};
+

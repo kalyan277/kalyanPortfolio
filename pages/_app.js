@@ -6,6 +6,11 @@ import '../styles/main.scss';
  import "react-toastify/dist/ReactToastify.css";
  import"react-datepicker/dist/react-datepicker.css";
 import auth0 from '../services/auth0';
+import {Provider} from 'react-redux';
+import {createStore,applyMiddleware,} from 'redux';
+import reducers from '../reducers/';
+import thunk from 'redux-thunk';
+const store =createStore(reducers,applyMiddleware(thunk))
  class PortfolioApp extends App {
    static async getInitialProps({Component,router,ctx}) {
     // console.log(ctx.req);
@@ -26,8 +31,10 @@ import auth0 from '../services/auth0';
        const { Component, pageProps, auth } = this.props;
      return (
        <div>
-         <ToastContainer/>
-         <Component {...pageProps} auth={auth} />
+         <ToastContainer />
+         <Provider store={store}>
+           <Component {...pageProps} auth={auth} />
+         </Provider>
        </div>
      );
    }
