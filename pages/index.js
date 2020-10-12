@@ -53,7 +53,7 @@ import { CheckLoadingOfLanding } from "../actions";
     const {isAuthenticated,user}=this.props.auth
     const { isFlipping,loading } = this.state;
     const{isloading}= this.props;
-     console.log(loading);
+    // console.log(loading);
       //   console.log(isloading);
     return (
       <React.Fragment>
@@ -74,7 +74,7 @@ import { CheckLoadingOfLanding } from "../actions";
 
             <Container className={loading ? "visibibleContainer" : ""}>
               <Row>
-                <Col md="6">
+                <Col md="6" style={{opacity:`${loading ? 0 : 1}`}}>
                   <div className="hero-section text-center">
                     <div
                       className={`flipper ${isFlipping ? "isFlipping" : ""}`}
