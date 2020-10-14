@@ -20,7 +20,7 @@ const sessionPath = sessionClient.sessionPath(
 exports.postDialog = async(req, res) => {
   // The text query request.
 
-  parameters = req.body.parameters ? req.body.parameters:{};
+ const parameters = req.body.parameters ? req.body.parameters:{};
   const request = {
     session: sessionPath,
     queryInput: {
@@ -44,7 +44,7 @@ exports.postDialog = async(req, res) => {
 exports.eventDialog = async(req,res)=>{
 
       try {
-            parameters = req.body.parameters ? req.body.parameters : {};
+           const parameters = req.body.parameters ? req.body.parameters : {};
             //let self = module.exports;
             const request = {
             session: sessionPath,
