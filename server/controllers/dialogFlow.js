@@ -1,3 +1,5 @@
+'use strict'
+
 const dialogflow = require("dialogflow");
 const configkeys = require("../config/keys");
 const structjson =require('../../services/structjson');
@@ -17,6 +19,7 @@ const sessionPath = sessionClient.sessionPath(
 
 exports.postDialog = async(req, res) => {
   // The text query request.
+
   parameters = req.body.parameters ? req.body.parameters:{};
   const request = {
     session: sessionPath,
@@ -39,21 +42,27 @@ exports.postDialog = async(req, res) => {
 };
 
 exports.eventDialog = async(req,res)=>{
-       parameters = req.body.parameters ? req.body.parameters:{};
-      //let self = module.exports;
-        const request = {
-          session: sessionPath,
-          queryInput: {
-            event: {
-              name: req.body.event,
-              parameters: structjson.jsonToStructProto(parameters), //Dialogflow's v2 API uses gRPC. You'll need a jsonToStructProto method to convert your JavaScript object to a proto struct.
-              languageCode: configkeys.dialogFlowSessionLanguageCode,
-            },
-          },
-        };
 
-        let responses = await sessionClient.detectIntent(request);
-        return res.json(responses);
+      try {
+            parameters = req.body.parameters ? req.body.parameters : {};
+            //let self = module.exports;
+            const request = {
+            session: sessionPath,
+            queryInput: {
+                event: {
+                name: req.body.event,
+                parameters: structjson.jsonToStructProto(parameters), //Dialogflow's v2 API uses gRPC. You'll need a jsonToStructProto method to convert your JavaScript object to a proto struct.
+                languageCode: configkeys.dialogFlowSessionLanguageCode,
+                },
+            },
+            };
+
+            let responses = await sessionClient.detectIntent(request);
+            return res.json(responses);
+      } catch (error) {
+          console.log(error);
+      }
+
     }
    
 
