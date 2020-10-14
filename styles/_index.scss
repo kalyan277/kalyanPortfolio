@@ -78,8 +78,7 @@
 .hero-welcome-wrapper {
   justify-content: flex-end;
  margin-top: 132%; 
-
-    }
+   }
    .hero-section {
      width: 298px;
 
@@ -88,26 +87,30 @@
     }
   
   }
-       .hero-section-content-intro {
+   .hero-section-content-intro {
     font-size: 17px;
     }
-
+  .hero-welcome-text  {
+   font-size: 16px;
+  }
  }
-   @media (max-width: 480px) {
+ @media (max-width: 480px) {
 .hero-welcome-wrapper {
   justify-content: flex-end;
   margin-top: 126%; 
-
-    }
-     .hero-section {
-      width: 360px;
-      display: unset;
-    }
+  }
+ .hero-section {
+  width: 360px;
+  display: unset;
+  }
   
   .hero-section-content-intro {
-    font-size: 19px !important;
-    }
+  font-size: 19px !important;
+  }
 
+  .hero-welcome-text  {
+   font-size: 16px;
+  }
  }
 
 

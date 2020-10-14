@@ -138,12 +138,12 @@ import { toast } from "react-toastify";
              isOpen={this.state.visibility}
              toggle={this.onDismiss}
            >
-             You Have Successfully Deleted The Portfolio !!
+             You Have Successfully Deleted The Blog !!
            </Alert>
            {this.state.warning && (
              <Alert color="danger">
                <h4 className="alert-heading text-center">
-                 Sure You Want To Delete This Portfolio ?
+                 Sure You Want To Delete This Blog ?
                </h4>
                <hr />
                <div className="d-flex justify-content-center">

@@ -11,6 +11,8 @@ const app = next({ dev });
 const handle = routes.getRequestHandler(app);
 const portfolioRoutes = require("./routes/portpolio");
 const blogRoutes = require("./routes/blog");
+const dialogFlow =require("./routes/dialogFlow");
+
 const secretData=[
     {
         title:'ScreatData 1',
@@ -40,6 +42,7 @@ app.prepare().then(() => {
 
   server.use("/api/v1/portfolios", portfolioRoutes);
   server.use("/api/v1/blog", blogRoutes);
+  server.use('/api/v1',dialogFlow);
   server.get("/api/v1/secret", authServices.checkJWT, (req, res) => {
     return res.json(secretData);
   });
