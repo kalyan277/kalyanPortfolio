@@ -4,7 +4,6 @@ const router = express.Router();
 
 const DialogFlowCtrl = require('../controllers/dialogFlow');
 
-router.get('', DialogFlowCtrl.getDialog);
 router.post(
   "/event", DialogFlowCtrl.eventDialog
 );
