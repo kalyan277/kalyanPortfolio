@@ -1,6 +1,14 @@
 INTRODUCTION
 ------------
-Portfolio is a monolatic application build with the help of Javascript(Next js).Dialog Flow Is Implemented For ChatBot.Outh Is Used For Authentication.It Is Basically Class Based Application.MongoDb Atlas is used for database.The default backend server is overriden with express server.
+Portfolio is a Monolithic Class Based Application,build with the help of Javascript(Next js).
+
+Dialog Flow Is Implemented For ChatBot.
+
+Outh Is Used For Authentication.
+
+MongoDb Atlas is used for database.The default backend server is overriden with express server.
+
+SCSS And Bootstrap is used for styling.
 
 DEPLOYED LINK
 ------------
