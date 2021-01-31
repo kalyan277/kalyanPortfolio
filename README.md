@@ -1,6 +1,6 @@
 INTRODUCTION
 ------------
-Portfolio is a Monolithic Class Based Application,build with the help of Javascript(Next js).
+Portfolio is a Monolithic Class Based Application,Build with the help of Javascript(Next js).
 
 Dialog Flow Is Implemented For ChatBot.
 
